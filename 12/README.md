@@ -1,0 +1,22 @@
+# 12 输入和输出
+
+|本期版本|上期版本 
+|:---:|:---:
+`Tue Jan  3 00:09:01 CST 2023` |
+
+
+**输入输出指令**
+
+> [http://www.osdever.net/FreeVGA/vga/crtcreg.htm](http://www.osdever.net/FreeVGA/vga/crtcreg.htm)
+
+* CRT 地址端口: `0x3D4`
+* CRT 数据端口: `0x3D5`
+
+**光标位置**
+
+* `0x0E` - 光标位置高八位
+* `0x0F` - 光标位置低八位
+
+80 * 25 = 2000
+
+16 位 / 8 位 
