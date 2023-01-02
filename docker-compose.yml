@@ -1,0 +1,9 @@
+version: '3'
+services:
+  x86:
+    build: .
+    environment:
+      - DISPLAY=host.docker.internal:0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - .:/usr/src/app
