@@ -2,12 +2,12 @@
 
 |本期版本|上期版本 
 |:---:|:---:
-`Tue Jan  3 00:09:01 CST 2023` |
+`Mon Feb 19 16:46:45 CST 2024` |
 
 
 **输入输出指令**
 
-> [http://www.osdever.net/FreeVGA/vga/crtcreg.htm](http://www.osdever.net/FreeVGA/vga/crtcreg.htm)
+> <http://www.osdever.net/FreeVGA/vga/crtcreg.htm> 
 
 * CRT 地址端口: `0x3D4`
 * CRT 数据端口: `0x3D5`
