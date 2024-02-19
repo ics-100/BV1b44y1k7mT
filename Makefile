@@ -15,3 +15,6 @@ clean:
 	rm -rf bx_enh_dbg.ini
 	rm -rf master.img
 	rm -rf master.img.lock
+	rm -rf master.vdi
+	rm -rf master.vmdk
+	rm -rf main.lst
