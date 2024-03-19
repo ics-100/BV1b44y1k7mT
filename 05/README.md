@@ -2,7 +2,7 @@
 
 |本期版本|上期版本 
 |:---:|:---:
-`Mon Feb 19 13:46:46 CST 2024` |
+`Tue Mar 19 15:20:16 CST 2024` |
 
 ## Make
 
@@ -15,7 +15,9 @@
 * `dw`: define word
 * `dd`: define doubleword
 
-起始地址
+## 起始地址
+
+> 对比二进制文件可以看出差异
 
 ```nasm
 [org 0x7c00]
