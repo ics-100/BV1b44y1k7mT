@@ -21,5 +21,5 @@
 - CHS 模式(Cylinder / Head / Sector)
 - LBA 模式 Logical Block Address
 
-* `nop`
+* `nop`: 一点延迟
 * `hexdump`
