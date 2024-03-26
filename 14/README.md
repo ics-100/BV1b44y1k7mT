@@ -2,7 +2,7 @@
 
 |本期版本|上期版本
 |:---:|:---:
-`Thu Jan 12 02:04:16 CST 2023` |
+`Tue Mar 26 10:16:43 CST 2024` |
 
 ---
 
@@ -29,7 +29,13 @@
 0xA0 | 从 PIC 命令端口 | PIC\_S\_CMD
 0xA1 | 从 PIC 数据端口 | PIC\_S\_DATA
 
-**寄存器**
+**寄存器(7个寄存器)**
+
+> 配置完成之后， 21/A1收到的数据就是OCW1, 20/A0 则仍然通过 三四两个转台位来判断是对应写到哪个寄存器
+
+* ICW1 ~ ICW4 用于初始化 8259 initialization Command Words
+* OCW1 ~ OCW3 用于操作 Operation Command Words
+
 
 寄存器|端口|备注
 ---|---|---
@@ -38,12 +44,22 @@
 
 **流程**
 
+
 * 向 `OCW1` 写入屏蔽字，打开时钟中断
 * `sti` 设置 cpu 允许外中断
 *  向 `OCW2` 写入 `0x20` ，表示中断处理完毕
+
+```
+mov al, 0b1111_1110
+out PIC_M_DATA, al
+
+mov al, 0x20
+out PIC_M_CMD, al
+```
 
 ## Ref
 
 * <https://wiki.osdev.org/8259_PIC>
 * <https://pdos.csail.mit.edu/6.828/2005/readings/hardware/8259A.pdf>
 * [操作系统真象还原 学习笔记08--中断](https://www.kn0sky.com/?p=47)
+* [汇编学习笔记(25) - 8259中断芯片 - 蹦蹦骑士 - 博客园](https://www.cnblogs.com/alwaysking/p/14530023.html)

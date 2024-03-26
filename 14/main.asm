@@ -52,7 +52,7 @@ blink:
   mov dx, 0xb800
   mov es, dx
 
-    shl bx, 1   ; 一个字符需要两个位置
+  shl bx, 1   ; 一个字符需要两个位置
   mov dl, [es: bx]
   cmp dl, ' '
   jnz .set_space
