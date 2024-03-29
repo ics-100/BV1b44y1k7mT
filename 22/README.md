@@ -2,26 +2,43 @@
 
 |本期版本|上期版本
 |:---:|:---:
-`Tue Mar 26 19:29:20 CST 2024` |
+`Fri Mar 29 19:35:55 CST 2024` |
+
+Executable and Linking Format / 可执行和链接的格式
+
+- 可执行程序 python / bash / gcc --> PE (`.exe`)
+- 可重定位文件 / 静态库 / gcc -c `.o` --> `.o.a` / `.lib`
+- 共享的目标文件 / 动态链接库 --> `.so`/ `.dll`
 
 ----
 
 c语言 ---> 汇编
 
-- 代码 .txt
+- 代码 `.txt`
 - 数据
-	- .data / 已经初始化的数据
-	- .bss / 未初始化的数据 - buffer 缓存区
+	- `.data` / 已经初始化的数据
+	- `.bss `/ 未初始化的数据 - buffer 缓存区
 
 ```bash
+nasm -f elf32 elf.asm -o elf.o
 readelf -e elf.o
 ```
 
-```
-objdump -d a.out
+```bash
+# 可能是跟交叉编译有关
+apt-get install gcc-multilib
+gcc -m32 elf.o
 ```
 
-PIE - Position Independent Executable : 位置无关的可执行程序
+PIE - Position Independent Executable: 位置无关的可执行程序
+
+```bash
+gcc -m32 elf.o -static
+```
+
+```bash
+objdump -d a.out
+```
 
 ---
 
@@ -30,7 +47,9 @@ Intel / AT&T
 gas GNU AT&T
 
 ```bash
-objdump -d elf.o -M intel
+objdump --help
+objdump -d elf.o			# AT&T
+objdump -d elf.o -M intel	# Intel
 ```
 
 ```
