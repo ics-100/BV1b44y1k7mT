@@ -2,7 +2,7 @@
 
 |本期版本|上期版本
 |:---:|:---:
-`Tue Mar 26 20:31:24 CST 2024` |
+`Mon Apr  1 12:32:30 CST 2024` |
 
 ```
 gcc -S hello.c
@@ -25,8 +25,9 @@ gcc -m32 -S hello.c
 * `printf` / `puts`
 * `-fno-pic`
 
-## 栈对其
+## 栈对齐
 
+* 将栈对齐到 16 位
 * `-mpreferred-stack-boundary=2`
 
 ## Intel
@@ -34,8 +35,9 @@ gcc -m32 -S hello.c
 * `-masm=intel`
 
 
-```
+```s
 leave
+
 mov esp, ebp
 pop ebp
 ```
