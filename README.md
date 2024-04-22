@@ -33,6 +33,11 @@
 * [02 hello world](./02)
 * [01 配置开发环境](./01)
 
+## 一些和配置环境相关，但又相对独立的内容
+
+* [Remote - SSH - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+* [C/C++ - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+
 ## Ref
 
 * <https://www.bilibili.com/video/BV1b44y1k7mT/>
