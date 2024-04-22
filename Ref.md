@@ -15,3 +15,10 @@ dd if=main.bin of=master.img bs=512 count=1 conv=notrunc
 
 bochs -q -unlock
 ```
+
+### Gcc
+
+* `-m32`
+* `-static`
+* `-nostartfiles`
+* `-e main`

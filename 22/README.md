@@ -2,27 +2,35 @@
 
 |本期版本|上期版本
 |:---:|:---:
-`Fri Mar 29 19:35:55 CST 2024` |
+`Mon Apr 22 23:21:29 CST 2024` | `Fri Mar 29 19:35:55 CST 2024`
 
-Executable and Linking Format / 可执行和链接的格式
+>  Executable and Linking Format / 可执行和链接的格式
 
-- 可执行程序 python / bash / gcc --> PE (`.exe`)
-- 可重定位文件 / 静态库 / gcc -c `.o` --> `.o.a` / `.lib`
-- 共享的目标文件 / 动态链接库 --> `.so`/ `.dll`
+类型 | 备注 | linux | windows
+---|---|---|---|
+可执行程序 | python / bash /gcc | - | PE(`.exe`)
+可重定位文件 / 静态库 | `gcc -c` <br /> `ar` | `.o`<br />`.a` | `.lib`
+共享的目标文件 / 动态链接库 | - | `.so` | `.dll`
+
+
 
 ----
 
 c语言 ---> 汇编
 
-- 代码 `.txt`
-- 数据
-	- `.data` / 已经初始化的数据
-	- `.bss `/ 未初始化的数据 - buffer 缓存区
+段  | 类别 | 备注
+---| ---| ---
+`.txt` | 代码段
+`.data` | 数据段 | 已经初始化的数据
+`.bss` | 数据段  | 未初始化的数据  - buffer 缓冲区
+
 
 ```bash
 nasm -f elf32 elf.asm -o elf.o
 readelf -e elf.o
 ```
+
+> 生成可执行文件
 
 ```bash
 # 可能是跟交叉编译有关
@@ -33,6 +41,7 @@ gcc -m32 elf.o
 PIE - Position Independent Executable: 位置无关的可执行程序
 
 ```bash
+; 静态链接
 gcc -m32 elf.o -static
 ```
 
