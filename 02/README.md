@@ -10,6 +10,10 @@
 * `view` - `Stack`
 * 2.7 已经修复
 
+**查看物理内存**
+
+* `view` - `Physical MemDump`
+
 **清除屏幕**
 
 ```asm
