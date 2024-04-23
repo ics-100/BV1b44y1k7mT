@@ -30,3 +30,4 @@ bochs -q -unlock
 `-masm=intel` | 使用Intel 汇编语法
 `-O0` | 不要优化
 `-fno-stack-protector` | 不要栈保护
+`-fno-builtin` | 去掉高效函数的替换
