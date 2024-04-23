@@ -28,3 +28,5 @@ bochs -q -unlock
 `-fno-pic` | 去掉位置无关的代码
 `-mpreferred-stack-boundary=2` | 栈对齐
 `-masm=intel` | 使用Intel 汇编语法
+`-O0` | 不要优化
+`-fno-stack-protector` | 不要栈保护

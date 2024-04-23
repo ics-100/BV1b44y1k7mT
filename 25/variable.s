@@ -1,20 +1,27 @@
 	.file	"variable.c"
 	.text
-	.globl	a
-	.bss
+
+	
+	.globl	a ; 需要导出
+	.bss			; 未初始化的内存
 	.align 4
-	.type	a, @object
+	.type	a, @object			；表示是一个变量或者符号
 	.size	a, 4
 a:
-	.zero	4
+	.zero	4		; 大小
+
+	; 初始化和不不初始化是一样的
 	.globl	b
 	.align 4
 	.type	b, @object
 	.size	b, 4
 b:
 	.zero	4
+
+
+
 	.globl	c
-	.data
+	.data					; 数据段
 	.align 4
 	.type	c, @object
 	.size	c, 4
@@ -23,8 +30,15 @@ c:
 	.align 4
 	.type	d, @object
 	.size	d, 4
+
+
+	; 没有被导出，外部函数就无法访问了
 d:
 	.long	8
+
+
+
+	； const 选择了 ro这个段
 	.section	.rodata
 	.align 4
 	.type	e, @object
