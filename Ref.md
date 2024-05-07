@@ -31,3 +31,4 @@ bochs -q -unlock
 `-O0` | 不要优化
 `-fno-stack-protector` | 不要栈保护
 `-fno-builtin` | 去掉高效函数的替换
+`-fverbose-asm` | 带上C语言注释信息
