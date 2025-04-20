@@ -6,3 +6,4 @@ master.vdi
 master.vmdk
 master.img.lock
 main.lst
+.vagrant
