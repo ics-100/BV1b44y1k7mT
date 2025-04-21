@@ -2,14 +2,14 @@
 
 |本期版本|上期版本
 |:---:|:---:
-`Tue Mar 26 17:06:46 CST 2024` |
+`Mon Apr 21 14:53:48 CST 2025` | `Tue Mar 26 17:06:46 CST 2024`
 
 
 ```bash
 gcc -m32 -S hello.c -o hello.s
 ```
 
-
+> 用汇编写一个可以在Linux上运行的程序
 
 ```bash
 nasm -f elf32 hello.asm

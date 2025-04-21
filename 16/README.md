@@ -2,7 +2,7 @@
 
 |本期版本|上期版本
 |:---:|:---:
-`Tue Mar 26 15:58:07 CST 2024` |
+`Mon Apr 21 14:35:46 CST 2025` | `Tue Mar 26 15:58:07 CST 2024`
 
 主引导扇区只有512 字节
 
@@ -13,6 +13,11 @@
 * `.readw`:  本地化标签
 * `pusha` / `pushad`
 * `popa` / `popad`
+
+
+```
+dd if=loader.bin of=master.img bs = 512 count=4 seek=2 conv=notrunc
+``` 
 
 ## Ref
 

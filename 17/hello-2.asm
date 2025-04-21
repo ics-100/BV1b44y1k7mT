@@ -8,6 +8,8 @@ section .text       ; 代码段
 global main
 main:
 	
+  ；上一个版本使用的是外部函数
+  ; 这个版本使用系统调用
 	mov eax, 4 ; write
   mov ebx, 1; stdout
   mov ecx, message; buffer
