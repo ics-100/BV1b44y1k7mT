@@ -82,5 +82,8 @@ Vagrant.configure("2") do |config|
     apt-get install -y net-tools
     apt-get install -y bochs bochs-x
     apt-get install -y nasm
+
+    # gcc -m32
+    apt-get install -y gcc-multilib
   SHELL
 end
