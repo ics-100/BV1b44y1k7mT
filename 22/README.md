@@ -2,7 +2,7 @@
 
 |本期版本|上期版本
 |:---:|:---:
-`Mon Apr 22 23:21:29 CST 2024` | `Fri Mar 29 19:35:55 CST 2024`
+`Tue Apr 22 08:54:05 CST 2025` | `Fri Mar 29 19:35:55 CST 2024`
 
 >  Executable and Linking Format / 可执行和链接的格式
 
@@ -39,6 +39,8 @@ gcc -m32 elf.o
 ```
 
 PIE - Position Independent Executable: 位置无关的可执行程序
+
+> 可以把代码加载到任何位置去执行
 
 ```bash
 ; 静态链接

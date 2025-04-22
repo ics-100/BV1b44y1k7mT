@@ -1,6 +1,7 @@
 #include "compile.h"
 
 void abc()
+
 {
 
 }

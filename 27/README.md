@@ -20,7 +20,20 @@
 -fverbose-asm
 ```
 
+
+
+
+
 ## 结构体
+
+
+```cpp
+typedef struct struct_t
+{
+  char c1;      // 1
+  int i1;       // 4
+}
+```
 
 ```
 # 不进行内存地址对齐
@@ -42,3 +55,9 @@ __attribute__((packed))
 ## 结构体成员顺序
 
 * 大的放前面
+
+
+
+## Ref
+
+* using as the gnu assembler 中文
