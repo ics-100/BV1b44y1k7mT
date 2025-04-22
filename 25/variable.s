@@ -27,6 +27,8 @@ b:
 	.size	c, 4
 c:
 	.long	5
+
+
 	.align 4
 	.type	d, @object
 	.size	d, 4
@@ -45,6 +47,7 @@ d:
 	.size	e, 4
 e:
 	.long	10
+
 	.globl	array
 	.bss
 	.align 4
@@ -52,6 +55,8 @@ e:
 	.size	array, 20
 array:
 	.zero	20
+
+
 	.globl	iarray
 	.data
 	.align 4
@@ -63,11 +68,15 @@ iarray:
 	.long	3
 	.long	4
 	.long	5
+
+
 	.globl	message
 	.align 4
 	.type	message, @object
 	.size	message, 13
 message:
 	.string	"hello world\n"
+
+	
 	.ident	"GCC: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"
 	.section	.note.GNU-stack,"",@progbits
